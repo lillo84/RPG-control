@@ -1,0 +1,37 @@
+<html>
+<head>
+    <script src="https://use.fontawesome.com/1eb020b771.js"></script>
+    <link href="template.css" rel="stylesheet" type="text/css">
+    <link href="user.css" rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+    <div id="user" data-user='User0/'></div>
+    <form class="mainDiv" align="center">
+        <h1 id="giocatore">Test</h1>
+        <input id="mainText" placeholder="Enter text here..."></input>
+        <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+    </form>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCdYPDjpzhY-zaa4WhO7gZu16FUPeS8yXE",
+        authDomain: "gdrcontrol.firebaseapp.com",
+        databaseURL: "https://gdrcontrol.firebaseio.com",
+        projectId: "gdrcontrol",
+        storageBucket: "gdrcontrol.appspot.com",
+        messagingSenderId: "38245825326"
+      };
+      firebase.initializeApp(config);
+
+    </script>
+    <script>
+      
+    </script>
+    <script src="user0.js"></script>
+</body>
+</html>
