@@ -6,7 +6,7 @@ var dbRef = firebase.database().ref().child(path + "giocatore");
 
 dbRef.on("value", snap => (giocatore.value = snap.val()));
 
-//abilità
+//abilitÃ 
 
 /* var abilita0 = document.getElementById("abilita" + 0);
 var dbRefAbi0 = firebase.database().ref().child(path + "abilita" + 0);
@@ -28,7 +28,7 @@ var abilita5 = document.getElementById("abilita" + 5);
 var dbRefAbi5 = firebase.database().ref().child(path + "abilita" + 5);
 dbRefAbi5.on("value", snap => (abilita5.value = snap.val())); */
 
-//variabili abilità
+//variabili abilitÃ 
 function caricaAbilita(i) {
   firebase
     .database()
@@ -88,33 +88,40 @@ function submitClick(v) {
 
 function genAbilita() {
   //$('div.x').attr('id', 'y');
+
+  var $abilities = document.getElementsByClassName("abi"),
+      numberOfAbilities = $abilities.length
   
   for (var j = 0; j <= 10; j++) {
-    //inserire codice di controllo sull'id abilità e associarlo alla variabile i
+    //inserire codice di controllo sull'id abilitÃ  e associarlo alla variabile i
     
-    var str = document.getElementsByClassName("abi")[j].id;
-    if (str.indexOf(j) == -1) {
-        var i = j;
-      $("<form />", { class: "abilita", onsubmit: "return false;" })
-        .append($("<input />", { placeholder: "Abilita", class:"abi" , id: "abilita" + i }))
-        .append(
-          $("<button />", {
-            id: "submitBtn",
-            onClick: "submitClick('abilita" + i + "')"
-          })
-        )
-        .appendTo("#listaAbilita");
-      $("<form />", { class: "abilitaBonus", onsubmit: "return false;" })
-        .append($("<input />", { placeholder: "0", class:"abiBonus" , id: "abilitaBonus" + i }))
-        .append(
-          $("<button />", {
-            id: "submitBtn",
-            onClick: "submitClick('abilita" + i + "')"
-          })
-        )
-        .appendTo("#listaAbilita");
-        
-        break;
+    var ability = $abilities[j].id;
+
+    if (ability.indexOf(j) == -1) {
+
+      numberOfAbilities += 1
+
+        $("<form />", { class: "abilita", onsubmit: "return false;" })
+            .append($("<input />", { placeholder: "Abilita", class:"abi" , id: "abilita" + numberOfAbilities }))
+            .append(
+                $("<button />", {
+                    id: "submitBtn",
+                    onClick: "submitClick('abilita" + numberOfAbilities + "')"
+                })
+            )
+            .appendTo("#listaAbilita");
+
+        $("<form />", { class: "abilitaBonus", onsubmit: "return false;" })
+            .append($("<input />", { placeholder: "0", class:"abiBonus" , id: "abilitaBonus" + numberOfAbilities }))
+            .append(
+                $("<button />", {
+                    id: "submitBtn",
+                    onClick: "submitClick('abilita" + numberOfAbilities + "')"
+                })
+            )
+            .appendTo("#listaAbilita");
+            
+            break;
       /* var abilita2 = document.getElementById("abilita" + 2);
       var dbRefAbi2 = firebase.database().ref().child(path + "abilita" + 2);
       dbRefAbi2.on("value", snap => (abilita2.value = snap.val())); */
