@@ -1,1 +1,168 @@
-/*#user { display:none; }
+#submitBtn {
+  display: none;
+}
+
+label {
+  color: #969696;
+  display: block;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+}
+
+input,
+select,
+textarea {
+  font-size: 2rem;
+  border: none;
+  color: #000;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  font-family: 'Arial', Helvetica, sans-serif;
+}
+
+textarea:focus,
+input:focus {
+  color: #000;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #999;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #999;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #999;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #999;
+}
+
+.gridbox {
+  border: solid 1px #000;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.no-box{
+    border: 0;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nome {
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+.puntiFerita {
+  grid-row-start: 3;
+  grid-row-end: 5;
+  grid-column-start: 5;
+  grid-column-end: 7;
+}
+
+.puntiFerita textarea {
+  flex: 100% 0 1;
+  width: 100%;
+  resize: none;
+}
+
+.puntiFeritaTot {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  padding: 0;
+}
+.nome input {
+  font-size: 30pt;
+}
+
+form {
+  flex: 100%;
+  display: flex;
+}
+
+.spellsKnow{
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);;
+    
+    
+}
+
+.spellsKnow label{
+    grid-column-end: 11;
+    grid-column-start: 1;
+    
+}
+
+.spellsKnow div{
+    border-left:0;
+    border-top:0;
+    border-bottom: 0;
+    margin: 1rem 0;
+    border-style: dotted;
+
+}
+
+.spellsKnow div label{
+    font-size: 1.2rem;
+}
+.abilitaBox{
+    grid-column-start: 5;
+    grid-column-end: 7;
+    
+}
+
+#listaAbilita{
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);;
+    font-size: 1rem;
+    
+    
+}
+#listaAbilita label{
+    grid-column-end: 5;
+    grid-column-start: 1;
+    
+}
+
+.abilita{
+    border-left:0;
+    border-top:0;
+    border-bottom: 0;
+    border-right: 1px;
+    border-style: dotted;
+    grid-column-end: 4;
+    grid-column-start: 1;
+    margin-bottom: 1rem;
+    
+}
+
+#listaAbilita input{
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.abilitaBonus{
+    grid-column-end: 5;
+    grid-column-start: 4;
+    margin-bottom: 1rem;    
+}
+
+.abilitaBonus input{
+    font-size: 1.5rem;
+}

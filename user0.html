@@ -1,37 +1,309 @@
 <html>
+
 <head>
+    <!--.<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-animate.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/1eb020b771.js"></script>
     <link href="template.css" rel="stylesheet" type="text/css">
     <link href="user.css" rel="stylesheet" type="text/css">
-    
+
 </head>
+
 <body>
-    <div id="user" data-user='User0/'></div>
-    <form class="mainDiv" align="center">
-        <h1 id="giocatore">Test</h1>
-        <input id="mainText" placeholder="Enter text here..."></input>
-        <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-    </form>
+    <div class="grid">
+        <div class="nome gridbox">
+
+            <form id="form" class="mainDiv" onsubmit="return false;">
+
+                <input placeholder="nome giocatore" id="giocatore" data-user='User0/'></input>
+
+                <button id="submitBtn" type="submitClick()" onClick=submitClick("giocatore")></button>
+            </form>
+            <label>Nome Giocatore</label>
+        </div>
+        <div class="gridbox">
+
+            <form class="mainDiv">
+
+                <input placeholder="0" id="forza"></input>
+
+                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+            <label>Forza</label>
+        </div>
+        <div class="gridbox">
+
+            <form class="mainDiv">
+
+                <input placeholder="0" id="destrezza"></input>
+
+                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+            <label>Destrezza</label>
+        </div>
+        <div class="gridbox">
+
+            <form class="mainDiv">
+
+                <input placeholder="0" id="costituzione"></input>
+
+                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+            <label>Costituzione</label>
+        </div>
+        <div class="gridbox">
+
+            <form class="mainDiv">
+
+                <input placeholder="0" id="intelligenza"></input>
+
+                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+            <label>Intelligenza</label>
+        </div>
+        <div class="gridbox">
+
+            <form class="mainDiv">
+
+                <input placeholder="0" id="saggezza"></input>
+
+                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+            <label>Saggezza</label>
+        </div>
+        <div class="gridbox">
+
+            <form class="mainDiv">
+
+                <input placeholder="0" id="carisma"></input>
+
+                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+            <label>Carisma</label>
+        </div>
+        <div class="puntiFerita gridbox">
+
+            <form class="mainDiv">
+
+                <textarea placeholder="Punti ferita attuali" id="puntiFerita"></textarea>
+
+                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+
+        </div>
+        <div class="puntiFeritaTot gridbox">
+            <form>
+                <input placeholder="Punti ferita totali" id="puntiFeritaTot"></input>
+                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+            <label>Punti ferita totali</label>
+        </div>
+        <div class="gridbox">
+
+            <form class="mainDiv">
+
+                <input placeholder="Init" id="iniziativa"></input>
+
+                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+            <label>Iniziativa</label>
+        </div>
+        <div class="gridbox">
+
+            <form class="mainDiv">
+
+                <input placeholder="0" id="init"></input>
+
+                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+            <label>Bonus Iniz</label>
+        </div>
+        <div class="gridbox">
+
+            <form class="BAB">
+
+                <input placeholder="0" id="BAB"></input>
+
+                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+            <label>BAB</label>
+        </div>
+        <div class="gridbox">
+
+            <form class="BMC">
+
+                <input placeholder="0" id="BMC"></input>
+
+                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+            <label>BMC</label>
+        </div>
+        <div class="gridbox">
+
+            <form class="mainDiv">
+
+                <input placeholder="0" id="AC"></input>
+
+                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+            <label>AC</label>
+        </div>
+        <div class="gridbox">
+            <form class="DMC">
+                <input placeholder="0" id="DMC"></input>
+                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+            <label>DMC</label>
+        </div>
+        <div class="abilitaBox gridbox">
+            <div id="listaAbilita">
+                <label>Abilità</label>
+                <!-- <form class="abilita" onsubmit="return false;">
+                    <input placeholder="Abilita" id="abilita0"></input>
+                    <button id="submitBtn" onClick=submitClick('abilita0')><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </form>
+                <form class="abilitaBonus" onsubmit="return false;">
+                    <input placeholder="0" id="abilitaBonus0"></input>
+                    <button id="submitBtn" onClick=submitClick('abilita1')><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </form>
+                <form class="abilita" onsubmit="return false;">
+                    <input placeholder="Abilita" id="abilita1"></input>
+                    <button id="submitBtn" onClick=submitClick('abilita2')><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </form>
+                <form class="abilitaBonus" onsubmit="return false;">
+                    <input placeholder="0" id="abilitaBonus1"></input>
+                    <button id="submitBtn" onClick=submitClick('abilita3')><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </form> -->
+            </div>
+            <div>
+
+                <form class="abilitaBonus" onsubmit="return false;">
+                    <button onClick=genAbilita()><i class="fa fa-plus" aria-hidden="true"></i></button>
+                </form>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="gridbox spellsKnow">
+            <label>Incantesimi conosciuti</label>
+            <div class="gridbox">
+                <form class="spellsKnow0">
+
+                    <input placeholder="0" id="Livello0"></input>
+
+                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </form>
+                <label>Livello 0</label>
+            </div>
+            <div class="gridbox">
+                <form class="spellsKnow1">
+
+                    <input placeholder="0" id="Livello1"></input>
+
+                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </form>
+                <label>Livello 1</label>
+            </div>
+            <div class="gridbox">
+                <form class="spellsKnow2">
+
+                    <input placeholder="0" id="Livello2"></input>
+
+                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </form>
+                <label>Livello 2</label>
+            </div>
+            <div class="gridbox">
+                <form class="spellsKnow3">
+
+                    <input placeholder="0" id="Livello3"></input>
+
+                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </form>
+                <label>Livello 3</label>
+            </div>
+            <div class="gridbox">
+                <form class="spellsKnow4">
+
+                    <input placeholder="0" id="Livello4"></input>
+
+                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </form>
+                <label>Livello 4</label>
+            </div>
+            <div class="gridbox">
+                <form class="spellsKnow5">
+
+                    <input placeholder="0" id="Livello5"></input>
+
+                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </form>
+                <label>Livello 5</label>
+            </div>
+            <div class="gridbox">
+                <form class="spellsKnow6">
+
+                    <input placeholder="0" id="Livello6"></input>
+
+                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </form>
+                <label>Livello 6</label>
+            </div>
+            <div class="gridbox">
+                <form class="spellsKnow7">
+
+                    <input placeholder="0" id="Livello7"></input>
+
+                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </form>
+                <label>Livello 7</label>
+            </div>
+            <div class="gridbox">
+                <form class="spellsKnow8">
+
+                    <input placeholder="0" id="Livello8"></input>
+
+                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </form>
+                <label>Livello 8</label>
+            </div>
+            <div class="gridbox no-box">
+                <form class="spellsKnow9">
+
+                    <input placeholder="0" id="Livello9"></input>
+
+                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </form>
+                <label>Livello 9</label>
+            </div>
+        </div>
+    </div>
 
 
 
     <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
     <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyCdYPDjpzhY-zaa4WhO7gZu16FUPeS8yXE",
-        authDomain: "gdrcontrol.firebaseapp.com",
-        databaseURL: "https://gdrcontrol.firebaseio.com",
-        projectId: "gdrcontrol",
-        storageBucket: "gdrcontrol.appspot.com",
-        messagingSenderId: "38245825326"
-      };
-      firebase.initializeApp(config);
-
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCdYPDjpzhY-zaa4WhO7gZu16FUPeS8yXE",
+            authDomain: "gdrcontrol.firebaseapp.com",
+            databaseURL: "https://gdrcontrol.firebaseio.com",
+            projectId: "gdrcontrol",
+            storageBucket: "gdrcontrol.appspot.com",
+            messagingSenderId: "38245825326"
+        };
+        firebase.initializeApp(config);
     </script>
     <script>
-      
+
     </script>
-    <script src="user0.js"></script>
+    <script src="index.js"></script>
+    <script src="user.js"></script>
 </body>
+
 </html>
