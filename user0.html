@@ -19,168 +19,164 @@
 
                 <input placeholder="nome giocatore" id="giocatore" data-user='User0/'></input>
 
-                <button id="submitBtn" type="submitClick()" onClick=submitClick("giocatore")></button>
+                <button id="submitBtn"  onClick="submitClick('giocatore')"></button>
             </form>
             <label>Nome Giocatore</label>
         </div>
         <div class="gridbox">
 
-            <form class="mainDiv">
+            <form id="form" class="mainDiv" onsubmit="return false;">
 
                 <input placeholder="0" id="forza"></input>
 
-                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button id="submitBtn" onClick="submitClick('forza')"> </button>
             </form>
             <label>Forza</label>
         </div>
         <div class="gridbox">
 
-            <form class="mainDiv">
+            <form class="mainDiv" onsubmit="return false;">
 
                 <input placeholder="0" id="destrezza"></input>
 
-                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button id="submitBtn" onClick="submitClick('destrezza')"> </button>
             </form>
             <label>Destrezza</label>
         </div>
         <div class="gridbox">
 
-            <form class="mainDiv">
+            <form class="mainDiv" onsubmit="return false;">
 
                 <input placeholder="0" id="costituzione"></input>
 
-                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button id="submitBtn" onClick="submitClick('costituzione')"> </button>
             </form>
             <label>Costituzione</label>
         </div>
         <div class="gridbox">
 
-            <form class="mainDiv">
+            <form class="mainDiv" onsubmit="return false;">
 
                 <input placeholder="0" id="intelligenza"></input>
 
-                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button id="submitBtn" onClick="submitClick('intelligenza')"> </button>
             </form>
             <label>Intelligenza</label>
         </div>
         <div class="gridbox">
 
-            <form class="mainDiv">
+            <form class="mainDiv" onsubmit="return false;">
 
                 <input placeholder="0" id="saggezza"></input>
 
-                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button id="submitBtn" onClick="submitClick('saggezza')"> </button>
             </form>
             <label>Saggezza</label>
         </div>
         <div class="gridbox">
 
-            <form class="mainDiv">
+            <form class="mainDiv" onsubmit="return false;">
 
                 <input placeholder="0" id="carisma"></input>
 
-                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button id="submitBtn" onClick="submitClick('carisma')"> </button>
             </form>
             <label>Carisma</label>
         </div>
         <div class="puntiFerita gridbox">
 
-            <form class="mainDiv">
+            <form class="mainDiv" onsubmit="return false;">
 
                 <textarea placeholder="Punti ferita attuali" id="puntiFerita"></textarea>
 
-                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button id="submitBtn" onClick="submitClick('puntiFerita')"> </button>
             </form>
 
         </div>
         <div class="puntiFeritaTot gridbox">
             <form>
                 <input placeholder="Punti ferita totali" id="puntiFeritaTot"></input>
-                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button id="submitBtn" onClick="submitClick('puntiFeritaTot')"> </button>
             </form>
             <label>Punti ferita totali</label>
         </div>
         <div class="gridbox">
 
-            <form class="mainDiv">
+            <form class="mainDiv" onsubmit="return false;">
 
                 <input placeholder="Init" id="iniziativa"></input>
 
-                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button id="submitBtn" onClick="submitClick('iniziativa')"> </button>
             </form>
             <label>Iniziativa</label>
         </div>
         <div class="gridbox">
 
-            <form class="mainDiv">
+            <form class="mainDiv" onsubmit="return false;">
 
-                <input placeholder="0" id="init"></input>
+                <input placeholder="0" id="Bonusinit"></input>
 
-                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button id="submitBtn" onClick="submitClick('Bonusinit')"> </button>
             </form>
             <label>Bonus Iniz</label>
         </div>
         <div class="gridbox">
 
-            <form class="BAB">
+            <form class="BAB" onsubmit="return false;">
 
                 <input placeholder="0" id="BAB"></input>
 
-                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button id="submitBtn" onClick="submitClick('BAB')"> </button>
             </form>
             <label>BAB</label>
         </div>
         <div class="gridbox">
 
-            <form class="BMC">
+            <form class="BMC" onsubmit="return false;">
 
                 <input placeholder="0" id="BMC"></input>
 
-                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button id="submitBtn" onClick="submitClick('BMC')"> </button>
             </form>
             <label>BMC</label>
         </div>
         <div class="gridbox">
 
-            <form class="mainDiv">
+            <form class="mainDiv" onsubmit="return false;">
 
                 <input placeholder="0" id="AC"></input>
 
-                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button id="submitBtn" onClick="submitClick('AC')"> </button>
             </form>
             <label>AC</label>
         </div>
         <div class="gridbox">
-            <form class="DMC">
+            <form class="DMC" onsubmit="return false;">
                 <input placeholder="0" id="DMC"></input>
-                <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button id="submitBtn" onClick="submitClick('DMC')"> </button>
             </form>
             <label>DMC</label>
         </div>
+        <div class="inventarioBox gridbox">
+                <div class="listainventario" id="listainventario">
+                    <label>Inventario</label>
+                </div>
+                <div>
+    
+                    <form class="invPlus" onsubmit="return false;">
+                        <button onClick="genCelle('inv' , 'inventario')"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </form>
+    
+                </div>
+            </div>
         <div class="abilitaBox gridbox">
-            <div id="listaAbilita">
+            <div class="listaabilita" id="listaabilita">
                 <label>Abilità</label>
-                <!-- <form class="abilita" onsubmit="return false;">
-                    <input placeholder="Abilita" id="abilita0"></input>
-                    <button id="submitBtn" onClick=submitClick('abilita0')><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-                </form>
-                <form class="abilitaBonus" onsubmit="return false;">
-                    <input placeholder="0" id="abilitaBonus0"></input>
-                    <button id="submitBtn" onClick=submitClick('abilita1')><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-                </form>
-                <form class="abilita" onsubmit="return false;">
-                    <input placeholder="Abilita" id="abilita1"></input>
-                    <button id="submitBtn" onClick=submitClick('abilita2')><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-                </form>
-                <form class="abilitaBonus" onsubmit="return false;">
-                    <input placeholder="0" id="abilitaBonus1"></input>
-                    <button id="submitBtn" onClick=submitClick('abilita3')><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-                </form> -->
             </div>
             <div>
 
-                <form class="abilitaBonus" onsubmit="return false;">
-                    <button onClick=genAbilita()><i class="fa fa-plus" aria-hidden="true"></i></button>
+                <form class="abilitaPlus" onsubmit="return false;">
+                    <button onClick="genCelle('abi' , 'abilita')"><i class="fa fa-plus" aria-hidden="true"></i></button>
                 </form>
 
             </div>
@@ -192,92 +188,92 @@
         <div class="gridbox spellsKnow">
             <label>Incantesimi conosciuti</label>
             <div class="gridbox">
-                <form class="spellsKnow0">
+                <form class="spellsKnow0" onsubmit="return false;">
 
-                    <input placeholder="0" id="Livello0"></input>
+                    <input placeholder="0" id="livello0"></input>
 
-                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    <button id="submitBtn" onClick="submitListClick('livello0' , 'livello')"> </button>
                 </form>
                 <label>Livello 0</label>
             </div>
             <div class="gridbox">
-                <form class="spellsKnow1">
+                <form class="spellsKnow1" onsubmit="return false;">
 
-                    <input placeholder="0" id="Livello1"></input>
+                    <input placeholder="0" id="livello1"></input>
 
-                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    <button id="submitBtn" onClick="submitListClick('livello1' ,'livello')"> </button>
                 </form>
                 <label>Livello 1</label>
             </div>
             <div class="gridbox">
-                <form class="spellsKnow2">
+                <form class="spellsKnow2" onsubmit="return false;">
 
-                    <input placeholder="0" id="Livello2"></input>
+                    <input placeholder="0" id="livello2"></input>
 
-                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    <button id="submitBtn" onClick="submitListClick('livello2' ,'livello')"> </button>
                 </form>
                 <label>Livello 2</label>
             </div>
             <div class="gridbox">
-                <form class="spellsKnow3">
+                <form class="spellsKnow3" onsubmit="return false;">
 
-                    <input placeholder="0" id="Livello3"></input>
+                    <input placeholder="0" id="livello3"></input>
 
-                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    <button id="submitBtn" onClick="submitListClick('livello3' ,'livello')"> </button>
                 </form>
                 <label>Livello 3</label>
             </div>
             <div class="gridbox">
-                <form class="spellsKnow4">
+                <form class="spellsKnow4" onsubmit="return false;">
 
-                    <input placeholder="0" id="Livello4"></input>
+                    <input placeholder="0" id="livello4"></input>
 
-                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    <button id="submitBtn" onClick="submitListClick('livello4' ,'livello')"> </button>
                 </form>
                 <label>Livello 4</label>
             </div>
             <div class="gridbox">
-                <form class="spellsKnow5">
+                <form class="spellsKnow5" onsubmit="return false;">
 
-                    <input placeholder="0" id="Livello5"></input>
+                    <input placeholder="0" id="livello5"></input>
 
-                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    <button id="submitBtn" onClick="submitListClick('livello5' ,'livello')"> </button>
                 </form>
                 <label>Livello 5</label>
             </div>
             <div class="gridbox">
-                <form class="spellsKnow6">
+                <form class="spellsKnow6" onsubmit="return false;">
 
-                    <input placeholder="0" id="Livello6"></input>
+                    <input placeholder="0" id="livello6"></input>
 
-                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    <button id="submitBtn" onClick="submitListClick('livello6' ,'livello')"> </button>
                 </form>
                 <label>Livello 6</label>
             </div>
             <div class="gridbox">
-                <form class="spellsKnow7">
+                <form class="spellsKnow7" onsubmit="return false;">
 
-                    <input placeholder="0" id="Livello7"></input>
+                    <input placeholder="0" id="livello7"></input>
 
-                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    <button id="submitBtn" onClick="submitListClick('livello7' ,'livello')"> </button>
                 </form>
                 <label>Livello 7</label>
             </div>
             <div class="gridbox">
-                <form class="spellsKnow8">
+                <form class="spellsKnow8" onsubmit="return false;">
 
-                    <input placeholder="0" id="Livello8"></input>
+                    <input placeholder="0" id="livello8"></input>
 
-                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    <button id="submitBtn" onClick="submitListClick('livello8' ,'livello')"> </button>
                 </form>
                 <label>Livello 8</label>
             </div>
             <div class="gridbox no-box">
-                <form class="spellsKnow9">
+                <form class="spellsKnow9" onsubmit="return false;">
 
-                    <input placeholder="0" id="Livello9"></input>
+                    <input placeholder="0" id="livello9"></input>
 
-                    <button id="submitBtn" onClick=submitClick()><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    <button id="submitBtn" onClick="submitListClick('livello9' ,'livello')"> </button>
                 </form>
                 <label>Livello 9</label>
             </div>

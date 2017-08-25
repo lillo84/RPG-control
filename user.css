@@ -126,7 +126,8 @@ form {
     
 }
 
-#listaAbilita{
+
+.listaabilita{
     
     display: grid;
     grid-template-columns: repeat(4, 1fr);;
@@ -134,12 +135,12 @@ form {
     
     
 }
-#listaAbilita label{
+
+.listaabilita label{
     grid-column-end: 5;
     grid-column-start: 1;
     
 }
-
 .abilita{
     border-left:0;
     border-top:0;
@@ -151,12 +152,10 @@ form {
     margin-bottom: 1rem;
     
 }
-
-#listaAbilita input{
+.abilita input{
     font-size: 1.5rem;
     text-align: left;
 }
-
 .abilitaBonus{
     grid-column-end: 5;
     grid-column-start: 4;
@@ -165,4 +164,63 @@ form {
 
 .abilitaBonus input{
     font-size: 1.5rem;
+    text-align: center;
+}
+.inventarioBox{
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.listainventario{
+    
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr auto;
+    font-size: 1rem;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    
+}
+
+
+.listainventario label{
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1; 
+    align-items: flex-start;
+    flex-direction: column;
+    align-self: flex-start;
+
+}
+
+
+.inventario{
+    border-left:0;
+    border-top:0;
+    border-bottom: 0;
+    border-right: 1px;
+    border-style: dotted;
+    grid-column-end: 8;
+    grid-column-start: 1;
+    margin-bottom: 1rem;
+    
+}
+
+
+
+.inventario input{
+    font-size: 1.5rem !important;
+    text-align: left;
+}
+
+.inventarioBonus{
+    grid-column-end: 9;
+    grid-column-start: 8;
+    margin-bottom: 1rem;    
+}
+
+.inventarioBonus input{
+    font-size: 1.5rem;
+    text-align: center;
 }
